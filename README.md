@@ -53,25 +53,43 @@ nmap --script smb-os-discovery 192.168.x.x
 ```
 This NSE script was used to gather SMB-related information such as the operating system, NetBIOS name, and workgroup details.
 ---
-
 Screenshots
-The screenshots included in this repository show the output of each scan performed during the task.
+
+The following screenshots show the commands executed and the results obtained during the network scanning task.
+
 * Host Discovery
+Host discovery scan to identify active devices on the local network.
+
 * Basic Port Scan
+Basic TCP port scan to identify open ports on the target host.
+
 * Scan Without Ping
+Performed a scan without host discovery to scan the target directly.
+
 * Service Version Detection
+Detected the services running on open ports along with their versions.
+
 * OS Detection
+Attempted to identify the operating system of the target machine.
+
 * Aggressive Scan
+Performed an aggressive scan that combines OS detection, version detection, script scanning, and traceroute.
+
 * SMB Enumeration
- ---
+Used an NSE script to collect SMB-related information such as the operating system, NetBIOS name, workgroup, and SMB service details.
+
+* Wireshark Packet Capture
+Captured and analyzed the network traffic generated during the Nmap scan using Wireshark. The capture shows TCP SYN packets, responses from the target host, and other packets exchanged during the scanning process. This helped me understand how Nmap performs port scanning at the packet level.
 
 What I Learned
-* How to discover live hosts on a network.
+* How to discover active hosts on a network.
 * How to identify open TCP ports.
 * How to detect running services and their versions.
-* The basics of operating system detection.
-* How Nmap NSE scripts can be used for information gathering.
-* The importance of performing reconnaissance before any security assessment.
----
+* How operating system detection works in Nmap.
+* How to use NSE scripts for SMB information gathering.
+* How to analyze Nmap-generated network traffic using Wireshark.
+* The importance of reconnaissance before performing a security assessment.
+
 Conclusion
-This task helped me understand the fundamentals of network reconnaissance using Nmap. By performing different scan types in a virtual lab, I gained practical experience with host discovery, port scanning, service detection, operating system identification, and basic enumeration. This hands-on practice improved my understanding of how network scanning is used during security assessments.
+
+This task helped me understand how to use Nmap for different types of network scanning in a virtual lab environment. I learned how to discover live hosts, identify open ports, detect running services and operating systems, and gather SMB information using NSE scripts. I also used Wireshark to observe the packets generated during the scan, which gave me a better understanding of how Nmap communicates with the target machine. Overall, this project improved my practical knowledge of network reconnaissance and basic security assessment techniques.
